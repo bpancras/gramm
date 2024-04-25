@@ -1,5 +1,22 @@
+%% gramm
+% Generate custom MATLAB plots.
+%
+%% Syntax
+% gramm()
+% gramm(Name, Value)
+%
+%% Description
+%   
+% 
+%% Examples
+% g = gramm() initializes a plot object.
+%
+% gramm(Name, Value)
+%% Input Arguments
+%
+%% Name-Value Arguments
 classdef gramm < matlab.mixin.Copyable
-    %GRAMM Implementation of the features from R's ggplot2 (GRAMmar of graphics plots) in Matlab
+    % GRAMM Implementation of the features from R's ggplot2 (GRAMmar of graphics plots) in Matlab
     % Pierre Morel 2015
     
     properties (Access=public)

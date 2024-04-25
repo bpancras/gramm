@@ -1,3 +1,5 @@
+%% gramm.redraw 
+% Redraw Optimize location and size of axes in figure after resizing
 function obj=redraw(obj,spacing,display)
 % redraw Optimize location and size of axes in figure after resizing
 %
@@ -135,7 +137,7 @@ if display
     set(obj.legend_text_handles,'Unit','data');
 end
 
-%% Move legend
+% Move legend
 
 %Get the position of the longest text element
 if first_redraw || ~isfield(obj.redraw_cache,'max_legend_ind')
@@ -174,7 +176,7 @@ else
     legend_pos = [obj.multi.orig(2)+obj.multi.size(2) 0 0 0];
 end
 
-%% Move title
+% Move title
 
 %Move title to the top and center it according to axes
 if ~isempty(obj.title_axe_handle)
@@ -192,7 +194,7 @@ if ~isempty(obj.title_axe_handle)
     set(obj.title_axe_handle,'Position',title_pos);
 end
 
-%% Move facets
+% Move facets
 
 %Move facets to the right
 %Get the leftmost facet part (should be y legend)
@@ -433,7 +435,7 @@ else
     end
 end
 
-%% Move title again
+% Move title again
 
 %Get updated position
 facet_pos=get(obj.facet_axes_handles,'Position');
@@ -459,7 +461,7 @@ if ~isempty(obj.title_axe_handle)
 end
 
 
-%% Resize legend
+% Resize legend
 %Resize legend y axis in order to get constant spacing between
 %legend entries
 L=length(obj.legend_text_handles);
